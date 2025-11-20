@@ -1,0 +1,125 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Header styles */
+header {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section styles */
+section {
+    margin: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Element selector */
+h2 {
+    color: black;
+}
+
+/* Class selector */
+.highlight {
+    background-color: orange;
+    color: white;
+    padding: 4px;
+}
+
+/* ID selector */
+#header {
+    border-bottom: 2px solid orange;
+}
+
+/* Attribute selector */
+a[href^="mailto:"] {
+    color: orange;
+}
+
+/* Pseudo-class selector */
+a:hover {
+    color: white;
+}
+
+/* Pseudo-element selector */
+p::first-line {
+    font-weight: bold;
+}
+
+/* Combinator selector */
+header + main {
+    border-top: 1px solid gray;
+}
+
+/* Inline styles (highest specificity) */
+h1 {
+    color: blue !important; /* Overridden by inline styles */
+}
+
+/* Internal styles */
+p {
+    color: green;
+}
+
+/* External styles */
+p {
+    color: red; /* Overridden by internal styles */
+}
+
+#header h1 {
+    color: orange !important; /* Overridden by !important */
+}
+
+main {
+    background: linear-gradient(to bottom, lightblue, white);
+}
+
+.color-change {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.color-change:hover {
+    background-color: #f44336;
+}
+
+
+/* Define the keyframes for rotating animation */
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the animation to your element */
+.rotating-element {
+    display: inline-block; /* or block, depending on your layout */
+    width: 100px; /* Width of the element */
+    height: 100px; /* Height of the element */
+    background-color: #4CAF50; /* Background color of the element */
+    color: white; /* Text color */
+    text-align: center; /* Align text in the center */
+    line-height: 100px; /* Align text vertically */
+    
+    animation-name: rotateAnimation; /* Reference the name of your keyframes */
+    animation-duration: 2s; /* Set the duration of one animation cycle */
+    animation-timing-function: linear; /* Define a steady pace for the animation */
+    animation-iteration-count: infinite; /* Repeat the animation indefinitely */
+}
+
+
